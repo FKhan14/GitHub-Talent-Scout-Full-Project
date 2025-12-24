@@ -1,0 +1,23 @@
+#Core
+fastapi>=0.104.0 #API Backend
+uvicorn>=0.24.0 #Server to run FastAPI
+streamlit>=1.28.0 #Frontend UI
+python-dotenv>=1.0.0 #load .env file
+
+#Database
+psycopg2-binary>=2.9.9 #PostgreSQL connector
+sqlalchemy>=2.0.23 #Database ORM
+pgvector>=0.2.3 # Vector Operations in Postgres
+
+#Github & ML
+PyGithub>= 2.1.1 # GitHub API Client
+requests>=2.31.0 #HTTP requests
+numpy>=1.21.0 #Arrays
+pandas>=1.3.0 #DataFrames
+sentence-transformers>=2.2.0 #HuggingFace Embeddings
+
+#ML algorithms
+scipy>=1.7.0 #For stats.mode in RandomForest
+
+#Utilities
+tqdm>=4.66.0 #Progress bars for scraping

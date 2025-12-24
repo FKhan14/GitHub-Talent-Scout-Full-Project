@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # PostgreSQL database with pgvector extension
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: talent_scout_db
+    environment:
+      POSTGRES_USER: talent_scout
+      POSTGRES_PASSWORD: secure_password_123
+      POSTGRES_DB: talent_scout_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U talent_scout"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - talent_scout_network
+
+volumes:
+  postgres_data:
+
+networks:
+  talent_scout_network:
+    driver: bridge
