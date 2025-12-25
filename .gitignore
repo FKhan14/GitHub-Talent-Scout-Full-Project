@@ -1,34 +1,8 @@
-# Python
 __pycache__/
-*.py[cod]
-*.class
-*.so
-.Python
-venv/
-env/
-ENV/
-
-# Environment
+*.pyc
 .env
-.env.local
-
-# IDE
-.vscode/
-.idea/
-*.swp
-
-# Data
+venv/
 data/raw/*
 data/processed/*
-!data/.gitkeep
-
-# Database
-*.db
-*.sqlite
-
-# Docker
+.vscode/
 *.log
-
-# OS
-.DS_Store
-Thumbs.db
